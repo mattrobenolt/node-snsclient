@@ -1,0 +1,12 @@
+{
+  "name": "snsclient",
+  "description": "A client for parsing Amazon AWS SNS requests.",
+  "keywords": ["amazon", "aws", "sns", "client"],
+  "version": "0.1.0",
+  "repository": "git://github.com/mattrobenolt/node-snsclient.git",
+  "author": "Matt Robenolt <matt@ydekproductions.com>",
+  "main": "./index",
+  "engines": {
+    "node": ">= 0.4.0"
+  }
+}
