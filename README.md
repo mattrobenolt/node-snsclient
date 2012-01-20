@@ -1,4 +1,9 @@
 # Amazon AWS SNS (Simple Notification Service) http(s) endpoint
+## Installation
+```
+$ npm install aws-snsclient
+```
+
 ## Basic Usage
 ```javascript
 var http = require('http')
