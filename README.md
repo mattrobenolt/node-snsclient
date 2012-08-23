@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/mattrobenolt/node-snsclient.png)](http://travis-ci.org/mattrobenolt/node-snsclient)
 # Amazon AWS SNS (Simple Notification Service) http(s) endpoint
 ## Installation
 ```
