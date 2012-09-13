@@ -7,7 +7,10 @@ var auth = {
   , account: 'xxx'
   , topic: 'topic-name'
 }
-var client = SNSClient(auth, function(message) {
+var client = SNSClient(auth, function(err, message) {
+    if (err) {
+        throw err;
+    }
     console.log(message);
 });
 

@@ -1,4 +1,7 @@
 # Amazon AWS SNS (Simple Notification Service) http(s) endpoint
+## **Important API Change from v0.1 to v0.2**
+The main `SNSClient` callback now returns the more accepted Node.js method of `function(err, msg)`. v0.1 sent both the error and message as a single argument.
+
 ## Installation
 ```
 $ npm install aws-snsclient
@@ -9,7 +12,7 @@ $ npm install aws-snsclient
 var http = require('http')
   , SNSClient = require('aws-snsclient');
 
-var client = SNSClient(function(message) {
+var client = SNSClient(function(err, message) {
     console.log(message);
 });
 
@@ -38,7 +41,7 @@ Signatures are automatically verified, but we can optionally verify the correct 
 var auth = {
     verify: false
 };
-var client = SNSClient(auth, function(message) {
+var client = SNSClient(auth, function(err, message) {
     console.log(message);
 });
 ```
@@ -50,7 +53,7 @@ var auth = {
   , account: 'xxx'
   , topic: 'xxx'
 };
-var client = SNSClient(auth, function(message) {
+var client = SNSClient(auth, function(err, message) {
     console.log(message);
 });
 ```
@@ -66,7 +69,7 @@ var auth = {
   , account: 'xxx'
   , topic: 'xxx'
 }
-var client = SNSClient(auth, function(message) {
+var client = SNSClient(auth, function(err, message) {
     console.log(message);
 });
 
